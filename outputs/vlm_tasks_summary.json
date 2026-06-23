@@ -1,0 +1,7 @@
+{
+  "task1_captioning": "99 captions (task1_captioning.json)",
+  "task2_vqa_animal_acc": 0.95,
+  "task3_classification_acc": 0.818,
+  "task4_text2img_P@5": 0.855,
+  "task4_img2img_R@1": 0.879
+}

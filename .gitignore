@@ -1,0 +1,21 @@
+# --- 데이터셋 (스크립트로 재생성 가능, 용량 커서 git 제외) ---
+data/
+
+# --- 압축/빌드 산출물 ---
+*.zip
+
+# --- 문서/리포트 md 제외 (요청) ---
+*.md
+
+# --- python ---
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# --- env / os ---
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db

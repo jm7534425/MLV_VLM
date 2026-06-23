@@ -1,0 +1,1165 @@
+{
+  "summary": {
+    "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "photo_acc": 0.8709677419354839,
+    "sketch_acc": 0.6666666666666666,
+    "abstraction_gap": 0.20430107526881724,
+    "sketch_fail_rate": 0.3333333333333333
+  },
+  "photo": [
+    {
+      "file": "apple__n07739125_4340.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_5365.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_577.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_5789.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_6124.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_6509.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "cat__n02121620_9603.jpg",
+      "gt": "cat",
+      "pred": "Cat",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_6285.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_6308.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_6444.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_716.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_7205.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_7729.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_9519.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_1018.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_121.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_1556.jpg",
+      "gt": "chair",
+      "pred": "Furniture",
+      "correct": false
+    },
+    {
+      "file": "chair__n03001627_15880.jpg",
+      "gt": "chair",
+      "pred": "Staircase",
+      "correct": false
+    },
+    {
+      "file": "chair__n03001627_1747.jpg",
+      "gt": "chair",
+      "pred": "Table",
+      "correct": false
+    },
+    {
+      "file": "chair__n03001627_1776.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_18021.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_6520.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_7044.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_7620.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_7746.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_8493.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_9420.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_9679.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_11850.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_16750.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_18540.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_3113.jpg",
+      "gt": "cow",
+      "pred": "Lion",
+      "correct": false
+    },
+    {
+      "file": "cow__n02404186_10627.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02404186_17045.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02404186_8233.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_7965.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_8240.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_838.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_8545.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_8650.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_8938.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_9095.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_11923.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_17824.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_27919.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_46119.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_51537.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_5816.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_7092.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_1288.jpg",
+      "gt": "hat",
+      "pred": "Person",
+      "correct": false
+    },
+    {
+      "file": "hat__n02954340_14508.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_1543.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_19161.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_3844.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_5453.jpg",
+      "gt": "hat",
+      "pred": "Baby",
+      "correct": false
+    },
+    {
+      "file": "hat__n02954340_6593.jpg",
+      "gt": "hat",
+      "pred": "Cap",
+      "correct": true
+    },
+    {
+      "file": "hat__n03028785_1830.jpg",
+      "gt": "hat",
+      "pred": "Car",
+      "correct": false
+    },
+    {
+      "file": "hat__n03028785_2125.jpg",
+      "gt": "hat",
+      "pred": "Woman",
+      "correct": false
+    },
+    {
+      "file": "hat__n03028785_3132.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03028785_911.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03124170_3924.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03124170_4101.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03124170_4347.jpg",
+      "gt": "hat",
+      "pred": "Cowboy hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03124170_5368.jpg",
+      "gt": "hat",
+      "pred": "Child",
+      "correct": false
+    },
+    {
+      "file": "hat__n03124170_6350.jpg",
+      "gt": "hat",
+      "pred": "Stairs",
+      "correct": false
+    },
+    {
+      "file": "hat__n03124170_6837.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_18909.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_2478.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_257.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_2743.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_276.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_3388.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_4795.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_1022.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_10455.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_10844.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_11126.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_11189.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_11339.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_3083.jpg",
+      "gt": "pear",
+      "pred": "Birch tree",
+      "correct": false
+    },
+    {
+      "file": "pear__n12651611_5494.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_637.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_7402.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_8030.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_8787.jpg",
+      "gt": "pear",
+      "pred": "Apple",
+      "correct": false
+    },
+    {
+      "file": "penguin__n02055803_3472.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_393.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_406.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_422.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_4452.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_6265.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_629.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "pig__n02395406_9891.jpg",
+      "gt": "pig",
+      "pred": "Piglet",
+      "correct": true
+    }
+  ],
+  "sketch": [
+    {
+      "file": "apple__n07739125_10025-2.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_12041-4.jpg",
+      "gt": "apple",
+      "pred": "Satellite dish",
+      "correct": false
+    },
+    {
+      "file": "apple__n07739125_12175-1.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_12353-2.jpg",
+      "gt": "apple",
+      "pred": "Rock",
+      "correct": false
+    },
+    {
+      "file": "apple__n07739125_15394-2.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "apple__n07739125_8592-1.jpg",
+      "gt": "apple",
+      "pred": "Apple",
+      "correct": true
+    },
+    {
+      "file": "cat__n02121620_4977-3.jpg",
+      "gt": "cat",
+      "pred": "Cat",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_10560-2.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_10863-2.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_3607-6.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_6821-3.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_6821-6.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_7312-5.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n02738535_904-1.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_1077-7.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_1545-4.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_1776-1.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_2002-8.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_2684-4.jpg",
+      "gt": "chair",
+      "pred": "Chair",
+      "correct": true
+    },
+    {
+      "file": "chair__n03001627_3353-2.jpg",
+      "gt": "chair",
+      "pred": "Tooth",
+      "correct": false
+    },
+    {
+      "file": "chair__n03001627_5486-3.jpg",
+      "gt": "chair",
+      "pred": "Finger",
+      "correct": false
+    },
+    {
+      "file": "cow__n01887787_10853-4.jpg",
+      "gt": "cow",
+      "pred": "Horse",
+      "correct": false
+    },
+    {
+      "file": "cow__n01887787_12810-7.jpg",
+      "gt": "cow",
+      "pred": "Goat",
+      "correct": false
+    },
+    {
+      "file": "cow__n01887787_1811-5.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_4550-6.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n01887787_700-2.jpg",
+      "gt": "cow",
+      "pred": "Dog",
+      "correct": false
+    },
+    {
+      "file": "cow__n01887787_9022-5.jpg",
+      "gt": "cow",
+      "pred": "Face",
+      "correct": false
+    },
+    {
+      "file": "cow__n01887787_9913-7.jpg",
+      "gt": "cow",
+      "pred": "Dog",
+      "correct": false
+    },
+    {
+      "file": "cow__n02403454_11850-3.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_16750-6.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_18540-1.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_3113-11.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02403454_3113-2.jpg",
+      "gt": "cow",
+      "pred": "Person",
+      "correct": false
+    },
+    {
+      "file": "cow__n02403454_3113-8.jpg",
+      "gt": "cow",
+      "pred": "Dog",
+      "correct": false
+    },
+    {
+      "file": "cow__n02403454_3113-9.jpg",
+      "gt": "cow",
+      "pred": "Mouse",
+      "correct": false
+    },
+    {
+      "file": "cow__n02404186_8233-1.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02404186_8233-5.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "cow__n02404186_8958-4.jpg",
+      "gt": "cow",
+      "pred": "Deer",
+      "correct": false
+    },
+    {
+      "file": "cow__n02404186_8958-7.jpg",
+      "gt": "cow",
+      "pred": "Cow",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_16270-3.jpg",
+      "gt": "duck",
+      "pred": "Swan",
+      "correct": false
+    },
+    {
+      "file": "duck__n01846331_16270-4.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_16486-4.jpg",
+      "gt": "duck",
+      "pred": "Bird",
+      "correct": false
+    },
+    {
+      "file": "duck__n01846331_4812-3.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_5551-2.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_5587-6.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "duck__n01846331_6199-3.jpg",
+      "gt": "duck",
+      "pred": "Duck",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_16810-3.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_16810-4.jpg",
+      "gt": "hat",
+      "pred": "Shoe",
+      "correct": false
+    },
+    {
+      "file": "hat__n02859184_17722-2.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_22326-1.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_33899-4.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_41293-5.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02859184_46119-3.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_1288-3.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_1543-3.jpg",
+      "gt": "hat",
+      "pred": "Helmet",
+      "correct": false
+    },
+    {
+      "file": "hat__n02954340_2076-2.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_3707-2.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_5636-5.jpg",
+      "gt": "hat",
+      "pred": "Acorn",
+      "correct": false
+    },
+    {
+      "file": "hat__n02954340_6593-1.jpg",
+      "gt": "hat",
+      "pred": "Cap",
+      "correct": true
+    },
+    {
+      "file": "hat__n02954340_7738-4.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03028785_1830-2.jpg",
+      "gt": "hat",
+      "pred": "Ring",
+      "correct": false
+    },
+    {
+      "file": "hat__n03028785_1830-6.jpg",
+      "gt": "hat",
+      "pred": "Purse",
+      "correct": false
+    },
+    {
+      "file": "hat__n03028785_2125-1.jpg",
+      "gt": "hat",
+      "pred": "Rock",
+      "correct": false
+    },
+    {
+      "file": "hat__n03028785_3132-4.jpg",
+      "gt": "hat",
+      "pred": "Plant",
+      "correct": false
+    },
+    {
+      "file": "hat__n03124170_11821-4.jpg",
+      "gt": "hat",
+      "pred": "Sock",
+      "correct": false
+    },
+    {
+      "file": "hat__n03124170_4471-4.jpg",
+      "gt": "hat",
+      "pred": "Cowboy hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03124170_716-2.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03124170_8430-4.jpg",
+      "gt": "hat",
+      "pred": "Heart",
+      "correct": false
+    },
+    {
+      "file": "hat__n03124170_8466-5.jpg",
+      "gt": "hat",
+      "pred": "Hat",
+      "correct": true
+    },
+    {
+      "file": "hat__n03124170_9883-4.jpg",
+      "gt": "hat",
+      "pred": "Bean",
+      "correct": false
+    },
+    {
+      "file": "horse__n02374451_10761-6.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_12230-3.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_16358-3.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_18192-5.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_2233-2.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_503-2.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "horse__n02374451_916-4.jpg",
+      "gt": "horse",
+      "pred": "Horse",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_10455-7.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_10844-4.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_11126-3.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_11126-7.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_12141-5.jpg",
+      "gt": "lizard",
+      "pred": "Lizard",
+      "correct": true
+    },
+    {
+      "file": "lizard__n01674464_12436-1.jpg",
+      "gt": "lizard",
+      "pred": "Pen",
+      "correct": false
+    },
+    {
+      "file": "lizard__n01674464_8874-2.jpg",
+      "gt": "lizard",
+      "pred": "Flower",
+      "correct": false
+    },
+    {
+      "file": "pear__n12651611_14584-1.jpg",
+      "gt": "pear",
+      "pred": "Peanut",
+      "correct": false
+    },
+    {
+      "file": "pear__n12651611_15990-1.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_16293-3.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_17956-4.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_19754-1.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "pear__n12651611_8100-2.jpg",
+      "gt": "pear",
+      "pred": "Pear",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_208-2.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_208-5.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_24-2.jpg",
+      "gt": "penguin",
+      "pred": "Penguin",
+      "correct": true
+    },
+    {
+      "file": "penguin__n02055803_3545-1.jpg",
+      "gt": "penguin",
+      "pred": "Pelican",
+      "correct": false
+    },
+    {
+      "file": "penguin__n02055803_701-4.jpg",
+      "gt": "penguin",
+      "pred": "Person",
+      "correct": false
+    },
+    {
+      "file": "penguin__n02055803_7917-2.jpg",
+      "gt": "penguin",
+      "pred": "Elephant",
+      "correct": false
+    },
+    {
+      "file": "penguin__n02055803_8972-2.jpg",
+      "gt": "penguin",
+      "pred": "Bird",
+      "correct": false
+    },
+    {
+      "file": "pig__n02395406_9891-10.jpg",
+      "gt": "pig",
+      "pred": "Fish",
+      "correct": false
+    },
+    {
+      "file": "pig__n02395406_9891-6.jpg",
+      "gt": "pig",
+      "pred": "Pig",
+      "correct": true
+    }
+  ]
+}

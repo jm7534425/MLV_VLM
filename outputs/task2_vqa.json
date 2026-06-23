@@ -1,0 +1,142 @@
+[
+  {
+    "file": "apple__n07739125_10025-2.jpg",
+    "gt": "apple",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "apple__n07739125_15394-2.jpg",
+    "gt": "apple",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "chair__n02738535_10863-2.jpg",
+    "gt": "chair",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "chair__n02738535_7312-5.jpg",
+    "gt": "chair",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "chair__n03001627_1776-1.jpg",
+    "gt": "chair",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "chair__n03001627_5486-3.jpg",
+    "gt": "chair",
+    "animal": "No.",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "cow__n01887787_4550-6.jpg",
+    "gt": "cow",
+    "animal": "Yes.",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "cow__n02403454_11850-3.jpg",
+    "gt": "cow",
+    "animal": "Yes.",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "cow__n02403454_3113-2.jpg",
+    "gt": "cow",
+    "animal": "No",
+    "count": "2",
+    "color": "bw"
+  },
+  {
+    "file": "cow__n02404186_8233-5.jpg",
+    "gt": "cow",
+    "animal": "Yes.",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "duck__n01846331_16270-4.jpg",
+    "gt": "duck",
+    "animal": "Yes.",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "duck__n01846331_5587-6.jpg",
+    "gt": "duck",
+    "animal": "Yes.",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "hat__n02859184_17722-2.jpg",
+    "gt": "hat",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "hat__n02859184_46119-3.jpg",
+    "gt": "hat",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "hat__n02954340_3707-2.jpg",
+    "gt": "hat",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "hat__n03028785_1830-2.jpg",
+    "gt": "hat",
+    "animal": "No",
+    "count": "2",
+    "color": "bw"
+  },
+  {
+    "file": "hat__n03124170_11821-4.jpg",
+    "gt": "hat",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "hat__n03124170_8466-5.jpg",
+    "gt": "hat",
+    "animal": "No",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "horse__n02374451_16358-3.jpg",
+    "gt": "horse",
+    "animal": "Yes.",
+    "count": "1",
+    "color": "bw"
+  },
+  {
+    "file": "horse__n02374451_916-4.jpg",
+    "gt": "horse",
+    "animal": "Yes.",
+    "count": "1",
+    "color": "bw"
+  }
+]

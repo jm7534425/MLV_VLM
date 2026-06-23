@@ -1,0 +1,497 @@
+[
+  {
+    "file": "apple__n07739125_10025-2.jpg",
+    "gt": "apple",
+    "caption": "The hand-drawn sketch depicts an incomplete apple with a stem, drawn with simple, uneven lines that suggest a quick, rough sketch rather than a detailed illustration."
+  },
+  {
+    "file": "apple__n07739125_12041-4.jpg",
+    "gt": "apple",
+    "caption": "The hand-drawn sketch depicts a simple, circular shape with a small, abstract figure inside, resembling a keyhole or a small house, rendered with basic lines of varying thickness. The overall appearance is incomplete as it lacks details and context."
+  },
+  {
+    "file": "apple__n07739125_12175-1.jpg",
+    "gt": "apple",
+    "caption": "The hand-drawn sketch depicts an apple with a simple, smooth line quality, but it does not appear to be completely drawn as there is a small gap at the bottom where the apple would typically end."
+  },
+  {
+    "file": "apple__n07739125_12353-2.jpg",
+    "gt": "apple",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a rock or a piece of stone, with uneven edges and a rough texture, drawn with a single continuous line that appears to be slightly wobbly, giving it a somewhat incomplete appearance."
+  },
+  {
+    "file": "apple__n07739125_15394-2.jpg",
+    "gt": "apple",
+    "caption": "The hand-drawn sketch depicts an apple with a simple, smooth line quality, but it appears incomplete as the stem is not fully drawn."
+  },
+  {
+    "file": "apple__n07739125_8592-1.jpg",
+    "gt": "apple",
+    "caption": "The hand-drawn sketch depicts an apple with a simple, smooth line quality, and it appears to be incomplete as it lacks details such as seeds or a stem."
+  },
+  {
+    "file": "cat__n02121620_4977-3.jpg",
+    "gt": "cat",
+    "caption": "The hand-drawn sketch depicts a cat with a simple, black outline style, appearing incomplete as it lacks details and shading."
+  },
+  {
+    "file": "chair__n02738535_10560-2.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete chair with basic lines and shading, lacking details such as legs or backrest."
+  },
+  {
+    "file": "chair__n02738535_10863-2.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, minimalist chair with a single cushion on the seat, drawn with clean, clear lines that give it a somewhat incomplete appearance due to the lack of shading or detail."
+  },
+  {
+    "file": "chair__n02738535_3607-6.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple chair with basic lines, showing the main object but lacking intricate details or shading to make it look complete."
+  },
+  {
+    "file": "chair__n02738535_6821-3.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white illustration of a rocking chair with a wooden frame and curved backrest, drawn with uneven lines that suggest a quick, freehand drawing style, and it appears to be incomplete as it lacks details such as the seat and legs."
+  },
+  {
+    "file": "chair__n02738535_6821-6.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple chair with a round seat and straight legs, drawn with basic lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "chair__n02738535_7312-5.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete chair with basic lines indicating its structure, including the backrest, seat, and legs. The line quality is rough and uneven, suggesting it was drawn quickly or by an inexperienced artist. The sketch does not include details such as wheels or a cushion on"
+  },
+  {
+    "file": "chair__n02738535_904-1.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple chair with a wooden frame, a cushioned seat, and vertical slats on the backrest. The lines are thin and evenly spaced, giving it a clean and minimalistic appearance. It appears to be a complete and well-defined drawing of a chair."
+  },
+  {
+    "file": "chair__n03001627_1077-7.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, abstract chair with a crisscross pattern on the backrest and vertical lines on the seat, rendered in black ink with uneven line quality, suggesting a quick, freehand drawing. The sketch appears incomplete as it lacks details such as legs or armrests"
+  },
+  {
+    "file": "chair__n03001627_1545-4.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, upright chair with a backrest and armrests, drawn with basic lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "chair__n03001627_1776-1.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple chair with basic lines, showing incomplete details such as missing legs and backrest."
+  },
+  {
+    "file": "chair__n03001627_2002-8.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white outline of a folding chair, with uneven lines indicating a rough, unfinished appearance, and it appears to be incomplete as it lacks details such as legs or backrest."
+  },
+  {
+    "file": "chair__n03001627_2684-4.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple chair with basic lines, showing incomplete details such as missing legs and backrest."
+  },
+  {
+    "file": "chair__n03001627_3353-2.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, stick-figure-like character with a rectangular body, two arms, and legs, drawn with minimal lines and appears incomplete at the top where the head should be."
+  },
+  {
+    "file": "chair__n03001627_5486-3.jpg",
+    "gt": "chair",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete finger pointing upwards with rough, uneven lines."
+  },
+  {
+    "file": "cow__n01887787_10853-4.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, outlined animal that resembles a rhinoceros or a similar large mammal, with a rough, uneven line quality and appears incomplete at the top."
+  },
+  {
+    "file": "cow__n01887787_12810-7.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a goat with a simple, black outline style, featuring distinct lines for the body, legs, and head, but lacks detailed features or shading, making it incomplete."
+  },
+  {
+    "file": "cow__n01887787_1811-5.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a cow's head with simple, uneven lines, showing incomplete features such as missing details around the eyes and mouth."
+  },
+  {
+    "file": "cow__n01887787_4550-6.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white outline of a rhinoceros, with uneven lines indicating a rough, unfinished appearance, and it appears to be incomplete as it lacks details such as texture or color."
+  },
+  {
+    "file": "cow__n01887787_700-2.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a person with a simple, black line quality, and it appears to be incomplete as it lacks facial features and additional details."
+  },
+  {
+    "file": "cow__n01887787_9022-5.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete face with a prominent nose and a few lines suggesting hair, drawn with a thin, uneven line quality that gives it a rough, unfinished appearance."
+  },
+  {
+    "file": "cow__n01887787_9913-7.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, abstract figure with a rounded head, minimalistic lines, and a small rectangular shape at the bottom, which could represent a dog or another animal. The line quality is basic and lacks detail, giving it a rough, unfinished appearance. The sketch does not appear"
+  },
+  {
+    "file": "cow__n02403454_11850-3.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of an animal, likely a cow or ox, with incomplete details such as missing legs and a less defined head. The line quality is basic and uneven, suggesting it was drawn quickly or by someone with limited artistic skill. The sketch does not appear"
+  },
+  {
+    "file": "cow__n02403454_16750-6.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of an animal, likely a cow or ox, with incomplete details such as missing legs and a tail. The line quality is basic and uneven, suggesting it was drawn quickly or by someone with limited drawing skills. The sketch does not appear to be"
+  },
+  {
+    "file": "cow__n02403454_18540-1.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a cow with a simple, rough line quality, and it appears to be incomplete as it lacks details such as eyes, ears, and a tail."
+  },
+  {
+    "file": "cow__n02403454_3113-11.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white outline of a cow standing on two legs, with a rough, uneven line quality that gives it a somewhat unfinished appearance."
+  },
+  {
+    "file": "cow__n02403454_3113-2.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple stick figure with long hair, wearing a hat, and holding a bow. The lines are thin and uneven, giving it a rough, unfinished appearance. It does not look completely finished as there are some gaps and imperfections in the drawing."
+  },
+  {
+    "file": "cow__n02403454_3113-8.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white stick figure with a round head, small eyes, a curved line for a mouth, and two small lines for arms and legs, which appear incomplete due to the lack of details. The line quality is basic and lacks shading or texture."
+  },
+  {
+    "file": "cow__n02403454_3113-9.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete mouse with a curved tail and a small, rounded body, drawn with thin, uneven lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "cow__n02404186_8233-1.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a cow with a simple, black outline on a white background, featuring basic shapes for its body, head, and tail, but lacks detailed features and appears incomplete."
+  },
+  {
+    "file": "cow__n02404186_8233-5.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a cow with simple, uneven lines, appearing incomplete due to missing details and a lack of shading or texture."
+  },
+  {
+    "file": "cow__n02404186_8958-4.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white outline of an animal with long ears and a curved body, likely resembling a deer or antelope, but it lacks detail and appears incomplete."
+  },
+  {
+    "file": "cow__n02404186_8958-7.jpg",
+    "gt": "cow",
+    "caption": "The hand-drawn sketch depicts a cow with a simple, rough line quality, and it appears to be incomplete as it lacks details such as eyes, ears, and a tail."
+  },
+  {
+    "file": "duck__n01846331_16270-3.jpg",
+    "gt": "duck",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete outline of a bird, with uneven lines suggesting a quick, freehand drawing style."
+  },
+  {
+    "file": "duck__n01846331_16270-4.jpg",
+    "gt": "duck",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete outline of a duck, with uneven lines and a lack of detail, suggesting it was drawn quickly or by an inexperienced artist."
+  },
+  {
+    "file": "duck__n01846331_16486-4.jpg",
+    "gt": "duck",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete outline of a bird with a long beak and a small head, drawn with uneven lines that suggest a quick, freehand drawing style."
+  },
+  {
+    "file": "duck__n01846331_4812-3.jpg",
+    "gt": "duck",
+    "caption": "The hand-drawn sketch depicts a simple, stylized duck with a minimalistic line quality, appearing incomplete as it lacks details such as feet or a beak."
+  },
+  {
+    "file": "duck__n01846331_5551-2.jpg",
+    "gt": "duck",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white outline of a duck, with uneven lines indicating a rough, unfinished style, and it appears to be incomplete as it lacks details such as feet or a beak."
+  },
+  {
+    "file": "duck__n01846331_5587-6.jpg",
+    "gt": "duck",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of a duck with a curved beak and webbed feet, drawn with uneven lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "duck__n01846331_6199-3.jpg",
+    "gt": "duck",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete outline of an animal's head and neck, with uneven lines and a lack of detail, suggesting it is not fully drawn or completed."
+  },
+  {
+    "file": "hat__n02859184_16810-3.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape that resembles a stylized flower or plant with a curved stem and a round, leaf-like structure at the top, drawn with uneven, freehand lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n02859184_16810-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple shoe with a curved sole and a pointed toe, drawn with basic lines that appear to be done by hand without any shading or color. The sketch is incomplete as it lacks details such as laces, soles, and other shoe features."
+  },
+  {
+    "file": "hat__n02859184_17722-2.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a brim and a few lines suggesting a band or ribbon around the top, drawn with uneven, wobbly lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n02859184_22326-1.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a single vertical line suggesting a brim or edge, drawn with basic line quality and appears to be incomplete."
+  },
+  {
+    "file": "hat__n02859184_33899-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of a hat with a brim, drawn with uneven lines that suggest a casual, freehand style, and it appears to be incomplete as it lacks details such as facial features or additional elements."
+  },
+  {
+    "file": "hat__n02859184_41293-5.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a single line for the brim and a curved line for the top, suggesting a basic shape but lacking details or context. The line quality is basic and uneven, indicating it was drawn quickly or by an amateur. It does not appear to"
+  },
+  {
+    "file": "hat__n02859184_46119-3.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a stylized hat or cone with a flat top, created using thin, uneven lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n02954340_1288-3.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a curved brim and a small emblem on the front, drawn with uneven lines that suggest a quick, freehand drawing."
+  },
+  {
+    "file": "hat__n02954340_1543-3.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a helmet or headgear with a curved top and two protruding elements at the sides, drawn with thin, uneven lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n02954340_2076-2.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple geometric shape resembling an abstract figure with a triangular base and a curved top, created using thin lines that appear to be drawn freehand, giving it a somewhat incomplete appearance."
+  },
+  {
+    "file": "hat__n02954340_3707-2.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a curved brim and a band around the top, drawn with basic lines that lack detail and shading."
+  },
+  {
+    "file": "hat__n02954340_5636-5.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts an acorn with a rounded top and a pointed bottom, drawn with simple lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n02954340_6593-1.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white illustration of a baseball cap with the word \"SUPREME\" written across the front in bold letters. The lines are uneven and somewhat rough, giving it a casual, hand-drawn appearance. The image is incomplete as it lacks details such"
+  },
+  {
+    "file": "hat__n02954340_7738-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a curved brim and a pointed top, drawn with thin, uneven lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n03028785_1830-2.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete circle with a small, rectangular shape at the top, resembling a hat or cap, but it lacks details and appears unfinished."
+  },
+  {
+    "file": "hat__n03028785_1830-6.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white illustration of a purse with a bow on top, drawn with minimal lines and appears incomplete as it lacks details such as the interior or any additional objects."
+  },
+  {
+    "file": "hat__n03028785_2125-1.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a cloud or a stylized flower with uneven edges, created using thin, uneven lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n03028785_3132-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple potted plant with a few leaves, drawn with basic lines and lacking detailed features, giving it a minimalist appearance."
+  },
+  {
+    "file": "hat__n03124170_11821-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of a sock with a visible heel and toe, drawn with uneven lines that suggest a quick, freehand drawing style, and it appears to be incomplete as it lacks details such as texture or color."
+  },
+  {
+    "file": "hat__n03124170_4471-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple cowboy hat with a wide brim and a pointed top, drawn with basic lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "hat__n03124170_716-2.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a curved brim and a small top, drawn with thin, uneven lines that suggest a quick, freehand drawing."
+  },
+  {
+    "file": "hat__n03124170_8430-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a leaf or a flower with a stem, drawn with uneven, freehand lines that give it a rough, organic appearance. The sketch is incomplete as it lacks detailed features and context."
+  },
+  {
+    "file": "hat__n03124170_8466-5.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete hat with a curved brim, drawn with light, uneven lines that suggest a quick, freehand drawing style."
+  },
+  {
+    "file": "hat__n03124170_9883-4.jpg",
+    "gt": "hat",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a leaf or a piece of fruit, with uneven lines indicating a rough, unfinished appearance."
+  },
+  {
+    "file": "horse__n02374451_10761-6.jpg",
+    "gt": "horse",
+    "caption": "The hand-drawn sketch depicts a horse's head with a simple, outlined design featuring a small square for the eye, and the lines are relatively thin but clear, making the sketch appear somewhat incomplete due to the lack of shading or detail."
+  },
+  {
+    "file": "horse__n02374451_12230-3.jpg",
+    "gt": "horse",
+    "caption": "The hand-drawn sketch depicts a horse's head with a simple, outlined design, featuring minimalistic lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "horse__n02374451_16358-3.jpg",
+    "gt": "horse",
+    "caption": "The hand-drawn sketch depicts a horse's head with simple, uneven lines, suggesting a quick or rough drawing, and it appears to be incomplete as it lacks details such as the body and legs."
+  },
+  {
+    "file": "horse__n02374451_18192-5.jpg",
+    "gt": "horse",
+    "caption": "The hand-drawn sketch depicts a horse's head with simple lines, showing incomplete features such as the mane and ears, and appears to be unfinished."
+  },
+  {
+    "file": "horse__n02374451_2233-2.jpg",
+    "gt": "horse",
+    "caption": "The hand-drawn sketch depicts a simple outline of an animal, likely a horse or cow, with uneven lines and incomplete details, suggesting it is not a finished drawing."
+  },
+  {
+    "file": "horse__n02374451_503-2.jpg",
+    "gt": "horse",
+    "caption": "The hand-drawn sketch depicts a simple, stick-figure horse with minimal details, featuring a basic outline of its body, head, and tail, rendered with uneven lines that suggest a quick, informal drawing. The sketch is incomplete as it lacks finer details such as eyes, ears, and mane."
+  },
+  {
+    "file": "horse__n02374451_916-4.jpg",
+    "gt": "horse",
+    "caption": "The hand-drawn sketch depicts a horse's head with minimalistic lines, showing only the outline of the face and mane, and it appears to be incomplete as it lacks details such as eyes, ears, and other features."
+  },
+  {
+    "file": "lizard__n01674464_10455-7.jpg",
+    "gt": "lizard",
+    "caption": "The hand-drawn sketch depicts a person running with an outstretched arm, using simple lines of varying thickness; it appears incomplete as the legs are not fully drawn."
+  },
+  {
+    "file": "lizard__n01674464_10844-4.jpg",
+    "gt": "lizard",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete frog outline with uneven lines and a missing tail, suggesting an unfinished or rough drawing."
+  },
+  {
+    "file": "lizard__n01674464_11126-3.jpg",
+    "gt": "lizard",
+    "caption": "The hand-drawn sketch depicts a simple, stick-figure-like lizard with a long tail, drawn with minimal lines and appears incomplete at the top."
+  },
+  {
+    "file": "lizard__n01674464_11126-7.jpg",
+    "gt": "lizard",
+    "caption": "The hand-drawn sketch depicts a lizard with a simple, black outline on a white background, featuring distinct lines for its body, legs, and tail, but lacking detailed features or shading."
+  },
+  {
+    "file": "lizard__n01674464_12141-5.jpg",
+    "gt": "lizard",
+    "caption": "The hand-drawn sketch depicts a simple, elongated creature with two small eyes and a single leg, drawn with minimal lines and appears incomplete."
+  },
+  {
+    "file": "lizard__n01674464_12436-1.jpg",
+    "gt": "lizard",
+    "caption": "The hand-drawn sketch depicts a simple, elongated shape resembling a fish or tadpole with a tail and a small head at the end, drawn with uneven, freehand lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "lizard__n01674464_8874-2.jpg",
+    "gt": "lizard",
+    "caption": "The hand-drawn sketch depicts a simple, vertical line with a small, rounded shape at the top, resembling a flower or plant stem. The line quality is rough and uneven, giving it an organic feel. It appears to be incomplete as there is no base or additional elements to complete the image."
+  },
+  {
+    "file": "pear__n12651611_14584-1.jpg",
+    "gt": "pear",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a stylized fruit or vegetable with a smooth, clean line quality, but it does not appear to be completely formed or detailed."
+  },
+  {
+    "file": "pear__n12651611_15990-1.jpg",
+    "gt": "pear",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of a pear with a smooth, continuous line quality that gives it a clean and minimalistic appearance. It appears to be incomplete as it lacks details such as seeds or stem."
+  },
+  {
+    "file": "pear__n12651611_16293-3.jpg",
+    "gt": "pear",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white outline of a pear hanging from a string, with a rough, uneven line quality that gives it a hand-drawn appearance, and it appears to be incomplete as it lacks details such as seeds or texture."
+  },
+  {
+    "file": "pear__n12651611_17956-4.jpg",
+    "gt": "pear",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white illustration of a pear with a smooth, curved shape and a thin stem at the top, showcasing a basic line quality that gives it a minimalist appearance."
+  },
+  {
+    "file": "pear__n12651611_19754-1.jpg",
+    "gt": "pear",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white outline of a pear with a stem at the top, showcasing a basic line quality that gives it a rough, unfinished appearance. The drawing is incomplete as it lacks color and shading."
+  },
+  {
+    "file": "pear__n12651611_8100-2.jpg",
+    "gt": "pear",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of a pear with a smooth, continuous line quality that gives it a clean and minimalistic appearance. It appears to be incomplete at the top, suggesting it may have been started but not finished."
+  },
+  {
+    "file": "penguin__n02055803_208-2.jpg",
+    "gt": "penguin",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white penguin standing on two legs with its beak pointing upwards. The lines are basic and uneven, giving it a rough, unfinished appearance. It does not look completely finished as there are no details or shading to indicate texture or depth."
+  },
+  {
+    "file": "penguin__n02055803_208-5.jpg",
+    "gt": "penguin",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white penguin standing upright with its flippers on the ground, showcasing a minimalistic style with clean lines that give it a somewhat incomplete appearance."
+  },
+  {
+    "file": "penguin__n02055803_24-2.jpg",
+    "gt": "penguin",
+    "caption": "The hand-drawn sketch depicts a simple, black outline of a penguin standing upright with its head tilted slightly to the side, showcasing a basic yet recognizable shape despite the minimalistic style. The line quality is uneven and somewhat rough, giving it an informal, childlike appearance. The sketch appears incomplete"
+  },
+  {
+    "file": "penguin__n02055803_3545-1.jpg",
+    "gt": "penguin",
+    "caption": "The hand-drawn sketch depicts a simple, black-and-white line drawing of a bird, possibly a pelican or heron, with a long beak and curved neck, sitting on a branch. The lines are uneven and somewhat rough, indicating a freehand style, and the image is incomplete as"
+  },
+  {
+    "file": "penguin__n02055803_701-4.jpg",
+    "gt": "penguin",
+    "caption": "The hand-drawn sketch depicts a person standing with one arm raised, wearing a long-sleeved shirt and pants, and appears to be incomplete as it lacks facial features and details. The lines are simple and somewhat uneven, giving it a casual, informal appearance."
+  },
+  {
+    "file": "penguin__n02055803_7917-2.jpg",
+    "gt": "penguin",
+    "caption": "The hand-drawn sketch depicts an abstract figure with a simple, incomplete outline, featuring a small head and elongated limbs, rendered in a rough, monochromatic style."
+  },
+  {
+    "file": "penguin__n02055803_8972-2.jpg",
+    "gt": "penguin",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete outline of a bird's head with a single eye and beak, drawn with uneven lines that suggest a quick, freehand drawing."
+  },
+  {
+    "file": "pig__n02395406_9891-10.jpg",
+    "gt": "pig",
+    "caption": "The hand-drawn sketch depicts a simple, abstract shape resembling a fish or a bird with a curved body and a small head, drawn with uneven, freehand lines that give it a rough, unfinished appearance."
+  },
+  {
+    "file": "pig__n02395406_9891-6.jpg",
+    "gt": "pig",
+    "caption": "The hand-drawn sketch depicts a simple, incomplete face with two eyes and a mouth, drawn with uneven lines that suggest a quick, rough sketch."
+  }
+]
