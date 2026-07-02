@@ -21,10 +21,14 @@ def img_to_data_url(image_bytes: bytes, mime: str = "image/png") -> str:
     return f"data:{mime};base64,{b64}"
 
 
-def chat(messages, model_id: str, max_tokens: int = 500, temperature: float = 0.0):
-    """vLLM 호출 → (텍스트, usage dict, latency_ms)."""
+def chat(messages, model_id: str, max_tokens: int = 500, temperature: float = 0.0,
+         response_format=None):
+    """vLLM 호출 → (텍스트, usage dict, latency_ms).
+    response_format: json_schema 강제 시 {"type":"json_schema","json_schema":{...}}."""
     payload = {"model": model_id, "messages": messages,
                "max_tokens": max_tokens, "temperature": temperature}
+    if response_format:
+        payload["response_format"] = response_format
     req = urllib.request.Request(
         VLLM_URL, data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json"})

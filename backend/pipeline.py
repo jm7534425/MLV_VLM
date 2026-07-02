@@ -27,7 +27,13 @@ schematic: 기저선 등장, 고정 도식 + 정밀 디테일, 비례 균형 시
 dawning_realism: 기저선→면, 겹침으로 깊이, 개별 디테일, 색 변이.
 pseudo_naturalistic: 원근·명암(3D), 비례·관절 정확, 질감.
 
-[품질점수 1~5] object_recognizability, detail_level, proportion, completeness, spatial_organization
+[품질점수 1~5 — 각 항목 1·3·5 기준]
+object_recognizability(객체 식별): 5=한눈에 명확 / 3=짐작은 되나 모호 / 1=식별 불가
+detail_level(세부 묘사): 5=풍부(머리카락·창살·단추 등) / 3=기본 부위만 / 1=거의 없음
+proportion(비례 정확도): 5=현실적 비례 / 3=과장 있으나 인식 가능 / 1=비례 붕괴
+completeness(완성도): 5=핵심부위 다 있고 마감 / 3=일부 누락 / 1=대부분 누락·미완
+spatial_organization(공간 구성): 5=기저선/면 위 논리적 배치(겹침·원근) / 3=부분적 배치 / 1=허공에 떠 있음·무질서
+(2·4점은 인접 기준의 중간)
 
 [출력] JSON만:
 {"stage":"<코드>","evidence":"근거(간결히)","confidence":0.0~1.0,
@@ -35,8 +41,28 @@ pseudo_naturalistic: 원근·명암(3D), 비례·관절 정확, 질감.
 stage는 코드 문자열: scribble_disordered, scribble_controlled, scribble_named, preschematic, schematic, dawning_realism, pseudo_naturalistic
 """
 
-STAGES = {"scribble_disordered", "scribble_controlled", "scribble_named",
-          "preschematic", "schematic", "dawning_realism", "pseudo_naturalistic"}
+STAGE_LIST = ["scribble_disordered", "scribble_controlled", "scribble_named",
+              "preschematic", "schematic", "dawning_realism", "pseudo_naturalistic"]
+STAGES = set(STAGE_LIST)
+QKEYS = ["object_recognizability", "detail_level", "proportion", "completeness", "spatial_organization"]
+
+# vLLM response_format용 스키마 — 깨진 JSON·잘못된 stage 원천 차단
+EVAL_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "stage": {"type": "string", "enum": STAGE_LIST},
+        "evidence": {"type": "string", "maxLength": 300},   # 반복 방지 상한
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "quality_scores": {
+            "type": "object",
+            "properties": {k: {"type": "integer", "minimum": 1, "maximum": 5} for k in QKEYS},
+            "required": QKEYS, "additionalProperties": False,
+        },
+    },
+    "required": ["stage", "evidence", "confidence", "quality_scores"],
+    "additionalProperties": False,
+}
+RESPONSE_FORMAT = {"type": "json_schema", "json_schema": {"name": "evaluation", "schema": EVAL_SCHEMA}}
 
 
 def _parse_json(text):
@@ -58,10 +84,11 @@ def run_evaluation(image_bytes, model_alias, caption):
     model_id = resolve_model(model_alias)
     prompt = f"[캡션]\n{caption}\n\n이 그림의 발달단계를 판정하고 JSON으로만 답하라."
     text, tokens, ms = vision_chat(image_bytes, prompt, model_id,
-                                   system=EVAL_SYSTEM, max_tokens=500)
+                                   system=EVAL_SYSTEM, max_tokens=500,
+                                   response_format=RESPONSE_FORMAT)  # 스키마 강제
     failure = None
     try:
-        result = _parse_json(text)
+        result = _parse_json(text)   # 스키마 강제라 항상 유효하지만 안전망 유지
         if result.get("stage") not in STAGES:
             failure = "parse_error"
         elif result.get("confidence", 1) < 0.4:
