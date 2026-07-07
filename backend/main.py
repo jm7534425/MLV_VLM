@@ -12,6 +12,7 @@ from fastapi.staticfiles import StaticFiles
 
 import cache
 import pipeline
+import retrieval
 from vllm_client import resolve_model
 
 app = FastAPI(title="Drawing Analysis API", version="0.1")
@@ -72,9 +73,45 @@ async def analyze(image: UploadFile = File(...),
                     caption_cached=cached, failure_type=failure)
 
 
-# ===== 자리만 (후속 주차) =====
-@app.post("/retrieve")   # 5주
-async def retrieve(): return not_implemented("retrieval")
+# ===== 2차: retrieval (실제 동작, 5주) =====
+@app.post("/retrieve")
+async def retrieve(image: UploadFile = File(None),
+                   query: str = Form(None),
+                   mode: str = Form("auto"),   # text | image | caption | auto
+                   model: str = Form("qwen3-vl-8b"),
+                   k: int = Form(8)):
+    t0 = datetime.now(timezone.utc)
+    caption = None
+    if mode == "auto":
+        mode = "text" if query else "image"
+
+    try:
+        if mode == "text":
+            results = retrieval.retrieve_text(query, k)
+            q = {"type": "text", "value": query}
+        elif mode == "caption":
+            img = await image.read()
+            caption, _, _ = pipeline.make_caption(img, model)   # 캡션용 vLLM 필요
+            results = retrieval.retrieve_text(caption, k)
+            q = {"type": "caption", "value": caption}
+        else:  # image
+            img = await image.read()
+            results = retrieval.retrieve_image(img, k)
+            q = {"type": "image", "value": None}
+    except Exception as e:
+        # 임베딩서버(8100)·캡션 vLLM(8000) 미기동 등 → 깔끔한 JSON 에러로
+        hint = "caption 모드는 캡션용 vLLM(8000)이 필요합니다" if mode == "caption" \
+               else "임베딩 서버(8100 터널)를 확인하세요"
+        return JSONResponse(status_code=200, content={
+            "task": "retrieval", "query": {"type": mode, "value": query}, "results": [],
+            "meta": {"failure_type": "backend_unavailable",
+                     "error": f"{type(e).__name__}: {e}", "hint": hint}})
+
+    ms = int((datetime.now(timezone.utc) - t0).total_seconds() * 1000)
+    return {"task": "retrieval", "query": q, "caption": caption, "results": results,
+            "meta": {"embed_model": "google/siglip2-so400m-patch16-384",
+                     "k": k, "latency_ms": ms,
+                     "timestamp": datetime.now(timezone.utc).isoformat()}}
 
 @app.post("/caption")    # 6주 (구조화 캡션)
 async def caption_task(): return not_implemented("captioning")

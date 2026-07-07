@@ -4,6 +4,14 @@ data/
 # --- 압축/빌드 산출물 ---
 *.zip
 
+# --- 검색 갤러리·인덱스 (AI-Hub 재배포 제약 + 용량) ---
+backend/static/gallery/
+backend/index/
+
+# --- 참고 논문 PDF (저작권, 재배포 제외) ---
+papers/
+*.pdf
+
 # --- 문서/리포트 md 제외 (요청) ---
 *.md
 
