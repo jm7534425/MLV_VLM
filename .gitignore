@@ -8,6 +8,9 @@ data/
 backend/static/gallery/
 backend/index/
 
+# --- 문서용 예시 이미지 (AI-Hub·kiddraw 파생, 재배포 제약) ---
+docs/img/
+
 # --- 참고 논문 PDF (저작권, 재배포 제외) ---
 papers/
 *.pdf
