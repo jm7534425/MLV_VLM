@@ -96,6 +96,18 @@ header .tag{font-size:11px;background:rgba(255,255,255,.2);padding:2px 8px;borde
 .rcard .info .c{font-weight:700;font-size:13px}
 .rcard .info .s{color:#9aa3b2;font-size:11px;display:flex;justify-content:space-between;margin-top:2px}
 .rcard .rank{font-weight:700;color:var(--accent)}
+
+/* 캡셔닝 */
+.capsec{margin-bottom:13px}
+.capsec .lab{font-size:11px;color:var(--sub);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:#eef1ff;color:#3b45a8;font-size:13px;padding:3px 11px;border-radius:20px}
+.chip.part{background:#eef7ef;color:#3a7a45}
+.captext{font-size:14px;color:#374151;line-height:1.55}
+.mstats{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:#6b7280;background:#f7f8fb;border-radius:10px;padding:11px 13px}
+.mstats b{color:var(--ink)}
+.capflag{background:#fff3e6;color:#b3671a;font-size:12.5px;border-radius:8px;padding:9px 11px;margin-top:8px}
+.capbox{background:#f7f8fb;border-radius:11px;padding:12px 14px}
 </style>
 </head>
 <body>
@@ -111,7 +123,6 @@ header .tag{font-size:11px;background:rgba(255,255,255,.2);padding:2px 8px;borde
       <div class="tasks" id="tasks">
         <button data-task="evaluation" class="active">발달 평가</button>
         <button data-task="retrieval">유사 검색</button>
-        <button disabled>캡셔닝·6주</button>
         <button disabled>피드백·7주</button>
         <button disabled>편집·8주</button>
       </div>
@@ -150,14 +161,14 @@ const $=s=>document.querySelector(s);
 const emptyEl=document.getElementById("empty");   // 원래 placeholder 참조 캡처(중복 id 방지)
 const hideEmpty=()=>emptyEl.classList.add("hidden");
 let curFile=null,curDataURL=null,curTask="evaluation",rMode="text";
+const RUNLABEL={evaluation:"분석하기",retrieval:"검색하기"};
 
-// 작업 전환 (평가 / 검색)
+// 작업 전환 (평가 / 검색 / 캡셔닝)
 document.querySelectorAll("#tasks button[data-task]").forEach(b=>b.onclick=()=>{
   document.querySelectorAll("#tasks button").forEach(x=>x.classList.remove("active"));
   b.classList.add("active");curTask=b.dataset.task;
-  const ret=curTask==="retrieval";
-  $("#rpanel").classList.toggle("hidden",!ret);
-  $("#run").textContent=ret?"검색하기":"분석하기";
+  $("#rpanel").classList.toggle("hidden",curTask!=="retrieval");
+  $("#run").textContent=RUNLABEL[curTask];
   syncRun();
 });
 // 검색 서브모드 전환
@@ -191,10 +202,10 @@ function setFile(f){
   r.readAsDataURL(f);
   syncRun();
 }
-// 실행 (평가 or 검색)
+// 실행 (평가 / 검색 / 캡셔닝)
 $("#run").onclick=async()=>{
-  const btn=$("#run");const label=curTask==="retrieval"?"검색하기":"분석하기";
-  btn.disabled=true;btn.textContent=curTask==="retrieval"?"검색 중...":"분석 중...";
+  const btn=$("#run");const label=RUNLABEL[curTask];
+  btn.disabled=true;btn.textContent="처리 중...";
   hideEmpty();$("#result").classList.remove("hidden");
   $("#result").innerHTML=`<div style="flex:1;display:flex;align-items:center;justify-content:center"><div class="spinner"></div></div>`;
   try{
@@ -202,8 +213,7 @@ $("#run").onclick=async()=>{
       const fd=new FormData();fd.append("mode",rMode);fd.append("k","12");
       if(rMode==="text") fd.append("query",$("#qtext").value.trim());
       else {fd.append("image",curFile);fd.append("model","qwen3-vl-8b");}
-      const data=await(await fetch("/retrieve",{method:"POST",body:fd})).json();
-      renderRetrieve(data);
+      renderRetrieve(await(await fetch("/retrieve",{method:"POST",body:fd})).json());
     }else{
       const fd=new FormData();fd.append("image",curFile);fd.append("model","qwen3-vl-8b");
       const data=await(await fetch("/analyze",{method:"POST",body:fd})).json();
@@ -212,6 +222,23 @@ $("#run").onclick=async()=>{
   }catch(e){$("#result").innerHTML=`<span class="err">오류: ${e}</span>`;}
   finally{btn.disabled=false;btn.textContent=label;syncRun();}
 };
+// 구조화 캡션 블록 (평가 화면의 WHAT 파트로 재사용)
+function capBlock(r){
+  if(!r||typeof r!=="object") return "";
+  const m=r.measured||{};
+  const chips=(a,cls="")=>(a&&a.length)?a.map(x=>`<span class="chip ${cls}">${x}</span>`).join(""):"";
+  const pal=(m.palette||[]).join("·");
+  return `<div class="capbox">
+    <div class="chips" style="margin-bottom:7px">${chips(r.objects)}${chips(r.body_parts,"part")}</div>
+    <div class="captext">${r.scene||"—"}</div>
+    ${(r.spatial_layout||r.completeness)?`<div class="captext" style="color:#6b7280;margin-top:4px;font-size:13px">배치: ${r.spatial_layout||"—"} · 완성도: ${r.completeness||"—"}</div>`:""}
+    <div class="mstats" style="margin-top:8px">
+      <span>색 <b>${m.is_color?"유채색":"흑백"}</b>${pal?` (${pal})`:""}</span>
+      <span>잉크 <b>${m.ink_ratio}</b></span><span>에지 <b>${m.edge_density}</b></span><span>요소 <b>${m.n_components}</b></span>
+    </div>
+    ${(r.flags&&r.flags.length)?`<div class="capflag">⚠️ ${r.flags.join("<br>")}</div>`:""}
+  </div>`;
+}
 // 검색 결과 렌더
 function renderRetrieve(d){hideEmpty();
   if(d.meta&&d.meta.failure_type){$("#result").innerHTML=`<div class="err">검색 실패 · ${d.meta.failure_type}</div>${d.meta.hint?`<div style="color:#9aa3b2;font-size:13px;margin-top:6px">💡 ${d.meta.hint}</div>`:""}`;return;}
@@ -247,7 +274,9 @@ function render(d){hideEmpty();
     <div class="stepper">${steps}</div>
     <div class="stage-head"><span class="name">${STAGE_KO[r.stage]||r.stage}</span>
       <span class="conf">신뢰도 <b>${(r.confidence*100).toFixed(0)}%</b></span></div>
-    <div class="cap">📝 ${d.caption}</div>
+    <h2 style="margin:12px 0 6px">📝 캡션 (WHAT)</h2>
+    ${capBlock(d.caption)}
+    <h2 style="margin:16px 0 6px">🔎 판정 근거 (WHY)</h2>
     <div class="ev">${r.evidence}</div>
     <h2 style="margin:16px 0 8px">품질 속성</h2>
     <div class="qgrid">${bars}</div>

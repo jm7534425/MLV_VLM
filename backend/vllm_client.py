@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """vLLM(OpenAI 호환) 호출 클라이언트 — GPU 서버의 Qwen3-VL."""
-import json, time, base64, urllib.request
+import os, json, time, base64, urllib.request
 
-VLLM_URL = "http://localhost:8000/v1/chat/completions"  # SSH 터널로 GPU서버 연결
+# 기본 = 데스크탑 GPU서버(Tailscale serve HTTPS 프록시). 환경변수로 교체 가능(터널 등).
+VLLM_URL = os.environ.get(
+    "VLLM_URL", "https://node.tail841802.ts.net/v1/chat/completions")
 DEFAULT_MODEL = "Qwen/Qwen3-VL-8B-Instruct"
 
 # 프론트의 모델 별칭 → 실제 vLLM 모델 id (4주차 모델비교 대비)

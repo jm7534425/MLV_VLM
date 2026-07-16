@@ -11,6 +11,9 @@ backend/index/
 # --- 문서용 예시 이미지 (AI-Hub·kiddraw 파생, 재배포 제약) ---
 docs/img/
 
+# --- Caption DB (런타임 산출물, AI-Hub 파생 캡션) ---
+backend/caption_db.sqlite
+
 # --- 참고 논문 PDF (저작권, 재배포 제외) ---
 papers/
 *.pdf

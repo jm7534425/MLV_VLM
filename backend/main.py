@@ -10,9 +10,10 @@ from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-import cache
+import caption_db
 import pipeline
 import retrieval
+import caption as caption_mod
 from vllm_client import resolve_model
 
 app = FastAPI(title="Drawing Analysis API", version="0.1")
@@ -43,32 +44,42 @@ def not_implemented(task):
                                  "meta": {"failure_type": "not_implemented"}})
 
 
-# ===== 1차: evaluation (실제 동작) =====
+# ===== 공유 캡션 (caption-first): 구조화 캡션을 1회 생성·캐시 → 모든 태스크가 재사용 =====
+def get_or_build_caption(img, model):
+    """구조화 캡션을 캐시에서 가져오거나 새로 만듦.
+    반환: (cap_obj, tokens, latency_ms, cached, err)."""
+    ver = caption_mod.CAPTION_PROMPT_VERSION
+    key_model = resolve_model(model)
+    hit = caption_db.get(img, key_model, ver)     # SQLite 영속 캐시
+    if hit is not None:
+        return hit, {}, 0, True, None
+    obj, tokens, ms, err = caption_mod.build_caption(img, model)
+    if err:
+        return None, tokens, ms, False, err
+    caption_db.put(img, key_model, ver, obj)
+    return obj, tokens, ms, False, None
+
+
+# ===== 1차: evaluation — 구조화 캡션(WHAT) 자동 생성·캐시 → 발달단계 판정(WHY) =====
 @app.post("/analyze")
 async def analyze(image: UploadFile = File(...),
-                  model: str = Form("qwen3-vl-8b"),
-                  caption: str = Form(None)):
+                  model: str = Form("qwen3-vl-8b")):
     img = await image.read()
 
-    # 캡션: 전달받았으면 재사용 / 캐시 조회 / 없으면 생성
-    cached = False
-    cap_tokens, cap_ms = {}, 0
-    if not caption:
-        caption = cache.get(img, resolve_model(model), pipeline.PROMPT_VERSION)
-        if caption:
-            cached = True
-        else:
-            caption, cap_tokens, cap_ms = pipeline.make_caption(img, model)
-            cache.put(img, resolve_model(model), pipeline.PROMPT_VERSION, caption)
-    else:
-        cached = True
+    # 캡션: 구조화 캡션을 캐시 조회 / 생성 (검색·캡션뷰와 공유)
+    cap_obj, cap_tokens, cap_ms, cached, cap_err = get_or_build_caption(img, model)
+    if cap_err:
+        return JSONResponse(status_code=200, content={
+            "task": "evaluation", "caption": None, "result": None,
+            "meta": {"failure_type": cap_err}})
 
-    # evaluation
-    result, ev_tokens, ev_ms, failure = pipeline.run_evaluation(img, model, caption)
+    # evaluation: 구조화 캡션의 WHAT 텍스트를 판정 근거로
+    cap_text = caption_mod.caption_to_text(cap_obj)
+    result, ev_tokens, ev_ms, failure = pipeline.run_evaluation(img, model, cap_text)
 
     tokens = {k: (cap_tokens.get(k) or 0) + (ev_tokens.get(k) or 0)
               for k in ("input", "output", "total")}
-    return envelope("evaluation", caption, result,
+    return envelope("evaluation", cap_obj, result,       # caption = 구조화 객체
                     model=model, tokens=tokens, latency_ms=cap_ms + ev_ms,
                     caption_cached=cached, failure_type=failure)
 
@@ -91,7 +102,10 @@ async def retrieve(image: UploadFile = File(None),
             q = {"type": "text", "value": query}
         elif mode == "caption":
             img = await image.read()
-            caption, _, _ = pipeline.make_caption(img, model)   # 캡션용 vLLM 필요
+            cap_obj, _, _, _, cerr = get_or_build_caption(img, model)  # 공유 구조화 캡션
+            if cerr:
+                raise RuntimeError(cerr)
+            caption = caption_mod.caption_to_text(cap_obj)
             results = retrieval.retrieve_text(caption, k)
             q = {"type": "caption", "value": caption}
         else:  # image
@@ -113,8 +127,24 @@ async def retrieve(image: UploadFile = File(None),
                      "k": k, "latency_ms": ms,
                      "timestamp": datetime.now(timezone.utc).isoformat()}}
 
-@app.post("/caption")    # 6주 (구조화 캡션)
-async def caption_task(): return not_implemented("captioning")
+@app.post("/caption")    # 구조화 캡션(공유 캐시). UI 탭은 없앰 — 평가가 자동 생성. API용으로 유지.
+async def caption_task(image: UploadFile = File(...),
+                       model: str = Form("qwen3-vl-8b")):
+    img = await image.read()
+    try:
+        obj, tokens, ms, _cached, err = get_or_build_caption(img, model)
+    except Exception as e:
+        return JSONResponse(status_code=200, content={
+            "task": "captioning", "result": None,
+            "meta": {"failure_type": "backend_unavailable", "error": f"{type(e).__name__}: {e}"}})
+    if err:
+        return JSONResponse(status_code=200, content={
+            "task": "captioning", "result": None, "meta": {"failure_type": err}})
+    return {"task": "captioning", "result": obj,
+            "meta": {"model": resolve_model(model),
+                     "prompt_version": caption_mod.CAPTION_PROMPT_VERSION,
+                     "latency_ms": ms, "tokens": tokens,
+                     "timestamp": datetime.now(timezone.utc).isoformat()}}
 
 @app.post("/feedback")   # 7주 (evaluation + persona)
 async def feedback(): return not_implemented("feedback")
@@ -125,6 +155,10 @@ async def edit(): return not_implemented("editing")
 
 @app.get("/health")
 async def health(): return {"status": "ok"}
+
+
+@app.get("/captions")    # Caption DB 현황 (개수 + 최근) — 검증·데모용
+async def captions_stats(): return caption_db.stats()
 
 
 # ===== 정적 프론트 (index.html) — 맨 마지막에 mount =====
